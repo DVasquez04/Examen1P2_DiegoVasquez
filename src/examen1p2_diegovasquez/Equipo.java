@@ -19,10 +19,10 @@ public class Equipo {
     public Equipo() {
     }
 
-    public Equipo(String Nombre, String Pais, int Rating) {
+    public Equipo(String Nombre, String Pais) {
         this.Nombre = Nombre;
         this.Pais = Pais;
-        this.Rating = Rating;
+        
     }
 
     public String getNombre() {
@@ -42,11 +42,17 @@ public class Equipo {
     }
 
     public int getRating() {
+        setRating();
         return Rating;
     }
 
-    public void setRating(int Rating) {
-        this.Rating = Rating;
+    public void setRating() {
+        int R = 0;
+        for (int i = 0; i < Plantilla.size(); i++) {
+            R += Plantilla.get(i).getRating();
+        }
+        R = (R/4);
+        this.Rating = R;
     }
 
     public ArrayList<Jugador> getPlantilla() {
@@ -54,7 +60,12 @@ public class Equipo {
     }
 
     public void setPlantilla(ArrayList<Jugador> Plantilla) {
-        this.Plantilla = Plantilla;
+        int js = Plantilla.size();
+        if(js == 4){
+            this.Plantilla = Plantilla;
+        }else{
+            System.out.println("Jugadores en planilla overflow");
+        }
     }
 
     @Override

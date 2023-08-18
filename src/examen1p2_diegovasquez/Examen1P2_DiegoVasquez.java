@@ -4,6 +4,8 @@
  */
 package examen1p2_diegovasquez;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Diego Vasquez
@@ -26,21 +28,454 @@ public class Examen1P2_DiegoVasquez extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        GroupJugadores = new javax.swing.ButtonGroup();
+        GroupPie = new javax.swing.ButtonGroup();
+        jPanel1 = new javax.swing.JPanel();
+        JT_MainMenu = new javax.swing.JTabbedPane();
+        JugadoresBackGround = new javax.swing.JPanel();
+        JTP_JugadoresCrud = new javax.swing.JTabbedPane();
+        JP_crearJugador = new javax.swing.JPanel();
+        JL_Title = new javax.swing.JLabel();
+        JT_NombreJugador = new javax.swing.JTextField();
+        JL_NombreJugador1 = new javax.swing.JLabel();
+        JL_EdadJugador = new javax.swing.JLabel();
+        JT_JugadorEdad = new javax.swing.JTextField();
+        JL_NacionalidadJ = new javax.swing.JLabel();
+        JT_JugadorNac = new javax.swing.JTextField();
+        JL_Pie = new javax.swing.JLabel();
+        JRB_derecha = new javax.swing.JRadioButton();
+        JRB_Izquierda = new javax.swing.JRadioButton();
+        bt_AgregarJugador = new javax.swing.JLabel();
+        JRB_Portero = new javax.swing.JRadioButton();
+        JRB_Defensa = new javax.swing.JRadioButton();
+        JRB_Mediocampista = new javax.swing.JRadioButton();
+        JRB_Delantero = new javax.swing.JRadioButton();
+        JP_editarJugador = new javax.swing.JPanel();
+        JP_listarJugadores = new javax.swing.JPanel();
+        JP_eliminarJugadores = new javax.swing.JPanel();
+        EstadiosBackGround = new javax.swing.JPanel();
+        JTP_EstadiosCrud = new javax.swing.JTabbedPane();
+        JP_crearEstadio = new javax.swing.JPanel();
+        JP_editarEstadio = new javax.swing.JPanel();
+        JP_listarEstadios = new javax.swing.JPanel();
+        JP_eliminarEstadios = new javax.swing.JPanel();
+        EquiposBackGround = new javax.swing.JPanel();
+        JTP_EquiposCrud = new javax.swing.JTabbedPane();
+        JP_crearEquipo = new javax.swing.JPanel();
+        JP_editarEquipo = new javax.swing.JPanel();
+        JP_listarEquipos = new javax.swing.JPanel();
+        JP_eliminarEquipos = new javax.swing.JPanel();
+        JP_Simulacion = new javax.swing.JPanel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setBackground(new java.awt.Color(204, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        JugadoresBackGround.setBackground(new java.awt.Color(0, 255, 204));
+
+        JP_crearJugador.setBackground(new java.awt.Color(0, 153, 153));
+
+        JL_Title.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        JL_Title.setForeground(new java.awt.Color(0, 0, 0));
+        JL_Title.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        JL_Title.setText("CREAR JUGADOR");
+
+        JL_NombreJugador1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        JL_NombreJugador1.setForeground(new java.awt.Color(0, 0, 0));
+        JL_NombreJugador1.setText("Nombre: ");
+
+        JL_EdadJugador.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        JL_EdadJugador.setForeground(new java.awt.Color(0, 0, 0));
+        JL_EdadJugador.setText("Edad:");
+
+        JL_NacionalidadJ.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        JL_NacionalidadJ.setForeground(new java.awt.Color(0, 0, 0));
+        JL_NacionalidadJ.setText("Nacionalidad: ");
+
+        JT_JugadorNac.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JT_JugadorNacActionPerformed(evt);
+            }
+        });
+
+        JL_Pie.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        JL_Pie.setForeground(new java.awt.Color(0, 0, 0));
+        JL_Pie.setText("Pie Habli:");
+
+        GroupPie.add(JRB_derecha);
+        JRB_derecha.setText("Derecha");
+
+        GroupPie.add(JRB_Izquierda);
+        JRB_Izquierda.setText("Izquierda");
+
+        bt_AgregarJugador.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        bt_AgregarJugador.setForeground(new java.awt.Color(0, 0, 0));
+        bt_AgregarJugador.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bt_AgregarJugador.setText("AGREGAR");
+        bt_AgregarJugador.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        bt_AgregarJugador.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bt_AgregarJugador.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_AgregarJugadorMouseClicked(evt);
+            }
+        });
+
+        GroupJugadores.add(JRB_Portero);
+        JRB_Portero.setText("Portero");
+
+        GroupJugadores.add(JRB_Defensa);
+        JRB_Defensa.setText("Defensa");
+
+        GroupJugadores.add(JRB_Mediocampista);
+        JRB_Mediocampista.setText("Mediocampista");
+        JRB_Mediocampista.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JRB_MediocampistaActionPerformed(evt);
+            }
+        });
+
+        GroupJugadores.add(JRB_Delantero);
+        JRB_Delantero.setText("Delantero");
+
+        javax.swing.GroupLayout JP_crearJugadorLayout = new javax.swing.GroupLayout(JP_crearJugador);
+        JP_crearJugador.setLayout(JP_crearJugadorLayout);
+        JP_crearJugadorLayout.setHorizontalGroup(
+            JP_crearJugadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(JP_crearJugadorLayout.createSequentialGroup()
+                .addGroup(JP_crearJugadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(JP_crearJugadorLayout.createSequentialGroup()
+                        .addGap(253, 253, 253)
+                        .addComponent(JL_Title, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(JP_crearJugadorLayout.createSequentialGroup()
+                        .addGap(41, 41, 41)
+                        .addGroup(JP_crearJugadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(JP_crearJugadorLayout.createSequentialGroup()
+                                .addComponent(JRB_Portero, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(JRB_Defensa, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(JRB_Mediocampista, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(JRB_Delantero, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(JP_crearJugadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(JT_NombreJugador, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(JP_crearJugadorLayout.createSequentialGroup()
+                                    .addComponent(JL_EdadJugador, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(25, 25, 25)
+                                    .addComponent(JT_JugadorEdad, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, JP_crearJugadorLayout.createSequentialGroup()
+                                    .addComponent(JL_NacionalidadJ, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(JT_JugadorNac)))
+                            .addGroup(JP_crearJugadorLayout.createSequentialGroup()
+                                .addComponent(JL_Pie, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(JRB_derecha, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(JRB_Izquierda, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(274, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JP_crearJugadorLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(bt_AgregarJugador, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(67, 67, 67))
+            .addGroup(JP_crearJugadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(JP_crearJugadorLayout.createSequentialGroup()
+                    .addGap(44, 44, 44)
+                    .addComponent(JL_NombreJugador1, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(637, Short.MAX_VALUE)))
+        );
+        JP_crearJugadorLayout.setVerticalGroup(
+            JP_crearJugadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(JP_crearJugadorLayout.createSequentialGroup()
+                .addComponent(JL_Title)
+                .addGap(23, 23, 23)
+                .addComponent(JT_NombreJugador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
+                .addGroup(JP_crearJugadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(JL_EdadJugador, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JT_JugadorEdad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(17, 17, 17)
+                .addComponent(bt_AgregarJugador, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(15, 15, 15)
+                .addGroup(JP_crearJugadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(JL_NacionalidadJ, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JT_JugadorNac, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(40, 40, 40)
+                .addGroup(JP_crearJugadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(JL_Pie, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JRB_derecha)
+                    .addComponent(JRB_Izquierda))
+                .addGap(26, 26, 26)
+                .addGroup(JP_crearJugadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(JRB_Portero)
+                    .addComponent(JRB_Defensa)
+                    .addComponent(JRB_Mediocampista)
+                    .addComponent(JRB_Delantero))
+                .addGap(90, 90, 90))
+            .addGroup(JP_crearJugadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(JP_crearJugadorLayout.createSequentialGroup()
+                    .addGap(49, 49, 49)
+                    .addComponent(JL_NombreJugador1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(389, Short.MAX_VALUE)))
+        );
+
+        JTP_JugadoresCrud.addTab("Crear Jugador", JP_crearJugador);
+
+        JP_editarJugador.setBackground(new java.awt.Color(0, 153, 153));
+
+        javax.swing.GroupLayout JP_editarJugadorLayout = new javax.swing.GroupLayout(JP_editarJugador);
+        JP_editarJugador.setLayout(JP_editarJugadorLayout);
+        JP_editarJugadorLayout.setHorizontalGroup(
+            JP_editarJugadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 760, Short.MAX_VALUE)
+        );
+        JP_editarJugadorLayout.setVerticalGroup(
+            JP_editarJugadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 468, Short.MAX_VALUE)
+        );
+
+        JTP_JugadoresCrud.addTab("Editar Jugador", JP_editarJugador);
+
+        JP_listarJugadores.setBackground(new java.awt.Color(0, 153, 153));
+
+        javax.swing.GroupLayout JP_listarJugadoresLayout = new javax.swing.GroupLayout(JP_listarJugadores);
+        JP_listarJugadores.setLayout(JP_listarJugadoresLayout);
+        JP_listarJugadoresLayout.setHorizontalGroup(
+            JP_listarJugadoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 760, Short.MAX_VALUE)
+        );
+        JP_listarJugadoresLayout.setVerticalGroup(
+            JP_listarJugadoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 468, Short.MAX_VALUE)
+        );
+
+        JTP_JugadoresCrud.addTab("Listar Jugadores", JP_listarJugadores);
+
+        JP_eliminarJugadores.setBackground(new java.awt.Color(0, 153, 153));
+
+        javax.swing.GroupLayout JP_eliminarJugadoresLayout = new javax.swing.GroupLayout(JP_eliminarJugadores);
+        JP_eliminarJugadores.setLayout(JP_eliminarJugadoresLayout);
+        JP_eliminarJugadoresLayout.setHorizontalGroup(
+            JP_eliminarJugadoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 760, Short.MAX_VALUE)
+        );
+        JP_eliminarJugadoresLayout.setVerticalGroup(
+            JP_eliminarJugadoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 468, Short.MAX_VALUE)
+        );
+
+        JTP_JugadoresCrud.addTab("Eliminar Jugadores", JP_eliminarJugadores);
+
+        javax.swing.GroupLayout JugadoresBackGroundLayout = new javax.swing.GroupLayout(JugadoresBackGround);
+        JugadoresBackGround.setLayout(JugadoresBackGroundLayout);
+        JugadoresBackGroundLayout.setHorizontalGroup(
+            JugadoresBackGroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(JTP_JugadoresCrud)
+        );
+        JugadoresBackGroundLayout.setVerticalGroup(
+            JugadoresBackGroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(JTP_JugadoresCrud)
+        );
+
+        JT_MainMenu.addTab("Jugadores", JugadoresBackGround);
+
+        EstadiosBackGround.setBackground(new java.awt.Color(0, 255, 204));
+
+        JP_crearEstadio.setBackground(new java.awt.Color(0, 102, 102));
+
+        javax.swing.GroupLayout JP_crearEstadioLayout = new javax.swing.GroupLayout(JP_crearEstadio);
+        JP_crearEstadio.setLayout(JP_crearEstadioLayout);
+        JP_crearEstadioLayout.setHorizontalGroup(
+            JP_crearEstadioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 760, Short.MAX_VALUE)
+        );
+        JP_crearEstadioLayout.setVerticalGroup(
+            JP_crearEstadioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 468, Short.MAX_VALUE)
+        );
+
+        JTP_EstadiosCrud.addTab("Crear Estadio", JP_crearEstadio);
+
+        JP_editarEstadio.setBackground(new java.awt.Color(0, 102, 102));
+
+        javax.swing.GroupLayout JP_editarEstadioLayout = new javax.swing.GroupLayout(JP_editarEstadio);
+        JP_editarEstadio.setLayout(JP_editarEstadioLayout);
+        JP_editarEstadioLayout.setHorizontalGroup(
+            JP_editarEstadioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 760, Short.MAX_VALUE)
+        );
+        JP_editarEstadioLayout.setVerticalGroup(
+            JP_editarEstadioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 468, Short.MAX_VALUE)
+        );
+
+        JTP_EstadiosCrud.addTab("Editar Estadio", JP_editarEstadio);
+
+        JP_listarEstadios.setBackground(new java.awt.Color(0, 102, 102));
+
+        javax.swing.GroupLayout JP_listarEstadiosLayout = new javax.swing.GroupLayout(JP_listarEstadios);
+        JP_listarEstadios.setLayout(JP_listarEstadiosLayout);
+        JP_listarEstadiosLayout.setHorizontalGroup(
+            JP_listarEstadiosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 760, Short.MAX_VALUE)
+        );
+        JP_listarEstadiosLayout.setVerticalGroup(
+            JP_listarEstadiosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 468, Short.MAX_VALUE)
+        );
+
+        JTP_EstadiosCrud.addTab("Listar Estadios", JP_listarEstadios);
+
+        JP_eliminarEstadios.setBackground(new java.awt.Color(0, 102, 102));
+
+        javax.swing.GroupLayout JP_eliminarEstadiosLayout = new javax.swing.GroupLayout(JP_eliminarEstadios);
+        JP_eliminarEstadios.setLayout(JP_eliminarEstadiosLayout);
+        JP_eliminarEstadiosLayout.setHorizontalGroup(
+            JP_eliminarEstadiosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 760, Short.MAX_VALUE)
+        );
+        JP_eliminarEstadiosLayout.setVerticalGroup(
+            JP_eliminarEstadiosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 468, Short.MAX_VALUE)
+        );
+
+        JTP_EstadiosCrud.addTab("Eliminar Estadios", JP_eliminarEstadios);
+
+        javax.swing.GroupLayout EstadiosBackGroundLayout = new javax.swing.GroupLayout(EstadiosBackGround);
+        EstadiosBackGround.setLayout(EstadiosBackGroundLayout);
+        EstadiosBackGroundLayout.setHorizontalGroup(
+            EstadiosBackGroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(JTP_EstadiosCrud)
+        );
+        EstadiosBackGroundLayout.setVerticalGroup(
+            EstadiosBackGroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(JTP_EstadiosCrud)
+        );
+
+        JT_MainMenu.addTab("Estadios", EstadiosBackGround);
+
+        EquiposBackGround.setBackground(new java.awt.Color(0, 255, 204));
+
+        JP_crearEquipo.setBackground(new java.awt.Color(0, 204, 153));
+
+        javax.swing.GroupLayout JP_crearEquipoLayout = new javax.swing.GroupLayout(JP_crearEquipo);
+        JP_crearEquipo.setLayout(JP_crearEquipoLayout);
+        JP_crearEquipoLayout.setHorizontalGroup(
+            JP_crearEquipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 760, Short.MAX_VALUE)
+        );
+        JP_crearEquipoLayout.setVerticalGroup(
+            JP_crearEquipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 468, Short.MAX_VALUE)
+        );
+
+        JTP_EquiposCrud.addTab("Crear Equipo", JP_crearEquipo);
+
+        JP_editarEquipo.setBackground(new java.awt.Color(0, 204, 153));
+
+        javax.swing.GroupLayout JP_editarEquipoLayout = new javax.swing.GroupLayout(JP_editarEquipo);
+        JP_editarEquipo.setLayout(JP_editarEquipoLayout);
+        JP_editarEquipoLayout.setHorizontalGroup(
+            JP_editarEquipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 760, Short.MAX_VALUE)
+        );
+        JP_editarEquipoLayout.setVerticalGroup(
+            JP_editarEquipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 468, Short.MAX_VALUE)
+        );
+
+        JTP_EquiposCrud.addTab("Editar Equipo", JP_editarEquipo);
+
+        JP_listarEquipos.setBackground(new java.awt.Color(0, 204, 153));
+
+        javax.swing.GroupLayout JP_listarEquiposLayout = new javax.swing.GroupLayout(JP_listarEquipos);
+        JP_listarEquipos.setLayout(JP_listarEquiposLayout);
+        JP_listarEquiposLayout.setHorizontalGroup(
+            JP_listarEquiposLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 760, Short.MAX_VALUE)
+        );
+        JP_listarEquiposLayout.setVerticalGroup(
+            JP_listarEquiposLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 468, Short.MAX_VALUE)
+        );
+
+        JTP_EquiposCrud.addTab("Listar Equipos", JP_listarEquipos);
+
+        JP_eliminarEquipos.setBackground(new java.awt.Color(0, 204, 153));
+
+        javax.swing.GroupLayout JP_eliminarEquiposLayout = new javax.swing.GroupLayout(JP_eliminarEquipos);
+        JP_eliminarEquipos.setLayout(JP_eliminarEquiposLayout);
+        JP_eliminarEquiposLayout.setHorizontalGroup(
+            JP_eliminarEquiposLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 760, Short.MAX_VALUE)
+        );
+        JP_eliminarEquiposLayout.setVerticalGroup(
+            JP_eliminarEquiposLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 468, Short.MAX_VALUE)
+        );
+
+        JTP_EquiposCrud.addTab("Eliminar Equipos", JP_eliminarEquipos);
+
+        javax.swing.GroupLayout EquiposBackGroundLayout = new javax.swing.GroupLayout(EquiposBackGround);
+        EquiposBackGround.setLayout(EquiposBackGroundLayout);
+        EquiposBackGroundLayout.setHorizontalGroup(
+            EquiposBackGroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(JTP_EquiposCrud)
+        );
+        EquiposBackGroundLayout.setVerticalGroup(
+            EquiposBackGroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(JTP_EquiposCrud)
+        );
+
+        JT_MainMenu.addTab("Equipos", EquiposBackGround);
+
+        JP_Simulacion.setBackground(new java.awt.Color(0, 255, 204));
+
+        javax.swing.GroupLayout JP_SimulacionLayout = new javax.swing.GroupLayout(JP_Simulacion);
+        JP_Simulacion.setLayout(JP_SimulacionLayout);
+        JP_SimulacionLayout.setHorizontalGroup(
+            JP_SimulacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 760, Short.MAX_VALUE)
+        );
+        JP_SimulacionLayout.setVerticalGroup(
+            JP_SimulacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 499, Short.MAX_VALUE)
+        );
+
+        JT_MainMenu.addTab("Simulacion", JP_Simulacion);
+
+        jPanel1.add(JT_MainMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 760, 530));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void bt_AgregarJugadorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_AgregarJugadorMouseClicked
+        // TODO add your handling code here:
+        String name = JT_NombreJugador.getText();
+        int edad = Integer.parseInt(JT_JugadorEdad.getText());
+        String nac = JT_JugadorNac.getText();
+        
+    }//GEN-LAST:event_bt_AgregarJugadorMouseClicked
+
+    private void JRB_MediocampistaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JRB_MediocampistaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JRB_MediocampistaActionPerformed
+
+    private void JT_JugadorNacActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JT_JugadorNacActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JT_JugadorNacActionPerformed
 
     /**
      * @param args the command line arguments
@@ -76,7 +511,47 @@ public class Examen1P2_DiegoVasquez extends javax.swing.JFrame {
             }
         });
     }
-
+    ArrayList<Jugador> juagdores = new ArrayList();
+    ArrayList<Equipo> equipos = new ArrayList();
+    ArrayList<Estadio> estadios = new ArrayList();
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel EquiposBackGround;
+    private javax.swing.JPanel EstadiosBackGround;
+    private javax.swing.ButtonGroup GroupJugadores;
+    private javax.swing.ButtonGroup GroupPie;
+    private javax.swing.JLabel JL_EdadJugador;
+    private javax.swing.JLabel JL_NacionalidadJ;
+    private javax.swing.JLabel JL_NombreJugador1;
+    private javax.swing.JLabel JL_Pie;
+    private javax.swing.JLabel JL_Title;
+    private javax.swing.JPanel JP_Simulacion;
+    private javax.swing.JPanel JP_crearEquipo;
+    private javax.swing.JPanel JP_crearEstadio;
+    private javax.swing.JPanel JP_crearJugador;
+    private javax.swing.JPanel JP_editarEquipo;
+    private javax.swing.JPanel JP_editarEstadio;
+    private javax.swing.JPanel JP_editarJugador;
+    private javax.swing.JPanel JP_eliminarEquipos;
+    private javax.swing.JPanel JP_eliminarEstadios;
+    private javax.swing.JPanel JP_eliminarJugadores;
+    private javax.swing.JPanel JP_listarEquipos;
+    private javax.swing.JPanel JP_listarEstadios;
+    private javax.swing.JPanel JP_listarJugadores;
+    private javax.swing.JRadioButton JRB_Defensa;
+    private javax.swing.JRadioButton JRB_Delantero;
+    private javax.swing.JRadioButton JRB_Izquierda;
+    private javax.swing.JRadioButton JRB_Mediocampista;
+    private javax.swing.JRadioButton JRB_Portero;
+    private javax.swing.JRadioButton JRB_derecha;
+    private javax.swing.JTabbedPane JTP_EquiposCrud;
+    private javax.swing.JTabbedPane JTP_EstadiosCrud;
+    private javax.swing.JTabbedPane JTP_JugadoresCrud;
+    private javax.swing.JTextField JT_JugadorEdad;
+    private javax.swing.JTextField JT_JugadorNac;
+    private javax.swing.JTabbedPane JT_MainMenu;
+    private javax.swing.JTextField JT_NombreJugador;
+    private javax.swing.JPanel JugadoresBackGround;
+    private javax.swing.JLabel bt_AgregarJugador;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
