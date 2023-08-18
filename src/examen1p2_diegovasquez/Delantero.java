@@ -3,24 +3,25 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package examen1p2_diegovasquez;
+
 import java.util.Random;
 
 /**
  *
  * @author Diego Vasquez
  */
-public class Portero extends Jugador{
+public class Delantero extends Jugador{
     Random ran = new Random();
 
-    public Portero() {
+    public Delantero() {
         super();
     }
 
-    public Portero(String Nombre, int Edad, String Nacionalidad, String PieHabil, examen1p2_diegovasquez.Equipo Equipo) {
+    public Delantero(String Nombre, int Edad, String Nacionalidad, String PieHabil, examen1p2_diegovasquez.Equipo Equipo) {
         super(Nombre, Edad, Nacionalidad, PieHabil, Equipo);
         Caracteristicas();
     }
-
+    
     @Override
     public void Caracteristicas() {
         boolean valid = true;
@@ -32,14 +33,47 @@ public class Portero extends Jugador{
                 valid = false;
             }
         }//fin while
+        Ritmo = r;
         
-        Agarre = r;
         valid = true;
         r = 0;
         while(valid){
             r = 1+ran.nextInt(12);
             r = r*12;
             if(r >= 70 && r <= 100){
+                valid = false;
+            }
+        }//fin while
+        Disparo = r;
+        
+        valid = true;
+        r = 0;
+        while(valid){
+            r = 1+ran.nextInt(12);
+            r = r*12;
+            if(r >= 70 && r <= 100){
+                valid = false;
+            }
+        }//fin while
+        Regate = r;
+        
+        valid = true;
+        r = 0;
+        while(valid){
+            r = 1+ran.nextInt(5);
+            r = r*13;
+            if(r <= 100){
+                valid = false;
+            }
+        }//fin while
+        Agarre = r;
+        
+        valid = true;
+        r = 0;
+        while(valid){
+            r = 1+ran.nextInt(5);
+            r = r*13;
+            if(r <= 100){
                 valid = false;
             }
         }//fin while
@@ -48,35 +82,13 @@ public class Portero extends Jugador{
         valid = true;
         r = 0;
         while(valid){
-            r = 1+ran.nextInt(12);
-            r = r*12;
-            if(r >= 70 && r <= 100){
-                valid = false;
-            }
-        }//fin while
-        Passing = r;
-        
-        valid = true;
-        r = 0;
-        while(valid){
             r = 1+ran.nextInt(5);
             r = r*13;
             if(r <= 100){
                 valid = false;
             }
         }//fin while
-        Fisico = r;
-        
-        valid = true;
-        r = 0;
-        while(valid){
-            r = 1+ran.nextInt(5);
-            r = r*13;
-            if(r <= 100){
-                valid = false;
-            }
-        }//fin while
-        Ritmo = r;
+         Fisico= r;
         
         valid = true;
         r = 0;
@@ -109,20 +121,9 @@ public class Portero extends Jugador{
                 valid = false;
             }
         }//fin while
-        Regate = r;
-        
-        valid = true;
-        r = 0;
-        while(valid){
-            r = 1+ran.nextInt(5);
-            r = r*13;
-            if(r <= 100){
-                valid = false;
-            }
-        }//fin while
-        Disparo = r;
+        Passing = r;
         
         Rating =(Agarre+Lanzamiento+Fisico+Ritmo+Entrada+Vision+Passing+Regate+Disparo)/9;
-    }//fin caracteristicas
+    }
     
 }

@@ -9,17 +9,18 @@ import java.util.Random;
  *
  * @author Diego Vasquez
  */
-public class Portero extends Jugador{
+public class Defensa extends Jugador{
     Random ran = new Random();
 
-    public Portero() {
+    public Defensa() {
         super();
     }
 
-    public Portero(String Nombre, int Edad, String Nacionalidad, String PieHabil, examen1p2_diegovasquez.Equipo Equipo) {
+    public Defensa(String Nombre, int Edad, String Nacionalidad, String PieHabil, examen1p2_diegovasquez.Equipo Equipo) {
         super(Nombre, Edad, Nacionalidad, PieHabil, Equipo);
         Caracteristicas();
     }
+    
 
     @Override
     public void Caracteristicas() {
@@ -32,47 +33,14 @@ public class Portero extends Jugador{
                 valid = false;
             }
         }//fin while
-        
-        Agarre = r;
-        valid = true;
-        r = 0;
-        while(valid){
-            r = 1+ran.nextInt(12);
-            r = r*12;
-            if(r >= 70 && r <= 100){
-                valid = false;
-            }
-        }//fin while
-        Lanzamiento = r;
-        
-        valid = true;
-        r = 0;
-        while(valid){
-            r = 1+ran.nextInt(12);
-            r = r*12;
-            if(r >= 70 && r <= 100){
-                valid = false;
-            }
-        }//fin while
-        Passing = r;
-        
-        valid = true;
-        r = 0;
-        while(valid){
-            r = 1+ran.nextInt(5);
-            r = r*13;
-            if(r <= 100){
-                valid = false;
-            }
-        }//fin while
         Fisico = r;
         
         valid = true;
         r = 0;
         while(valid){
-            r = 1+ran.nextInt(5);
-            r = r*13;
-            if(r <= 100){
+            r = 1+ran.nextInt(12);
+            r = r*12;
+            if(r >= 70 && r <= 100){
                 valid = false;
             }
         }//fin while
@@ -81,9 +49,9 @@ public class Portero extends Jugador{
         valid = true;
         r = 0;
         while(valid){
-            r = 1+ran.nextInt(5);
-            r = r*13;
-            if(r <= 100){
+            r = 1+ran.nextInt(12);
+            r = r*12;
+            if(r >= 70 && r <= 100){
                 valid = false;
             }
         }//fin while
@@ -98,7 +66,40 @@ public class Portero extends Jugador{
                 valid = false;
             }
         }//fin while
-        Vision = r;
+        Agarre = r;
+        
+        valid = true;
+        r = 0;
+        while(valid){
+            r = 1+ran.nextInt(5);
+            r = r*13;
+            if(r <= 100){
+                valid = false;
+            }
+        }//fin while
+        Lanzamiento = r;
+        
+        valid = true;
+        r = 0;
+        while(valid){
+            r = 1+ran.nextInt(5);
+            r = r*13;
+            if(r <= 100){
+                valid = false;
+            }
+        }//fin while
+         Vision= r;
+        
+        valid = true;
+        r = 0;
+        while(valid){
+            r = 1+ran.nextInt(5);
+            r = r*13;
+            if(r <= 100){
+                valid = false;
+            }
+        }//fin while
+        Passing = r;
         
         valid = true;
         r = 0;
@@ -123,6 +124,6 @@ public class Portero extends Jugador{
         Disparo = r;
         
         Rating =(Agarre+Lanzamiento+Fisico+Ritmo+Entrada+Vision+Passing+Regate+Disparo)/9;
-    }//fin caracteristicas
+    }
     
 }
