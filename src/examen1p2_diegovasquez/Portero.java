@@ -16,8 +16,8 @@ public class Portero extends Jugador{
         super();
     }
 
-    public Portero(String Nombre, int Edad, String Nacionalidad, String PieHabil, examen1p2_diegovasquez.Equipo Equipo) {
-        super(Nombre, Edad, Nacionalidad, PieHabil, Equipo);
+    public Portero(String Nombre, int Edad, String Nacionalidad, String PieHabil) {
+        super(Nombre, Edad, Nacionalidad, PieHabil);
         Caracteristicas();
     }
 

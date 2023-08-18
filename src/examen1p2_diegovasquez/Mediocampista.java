@@ -16,8 +16,8 @@ public class Mediocampista extends Jugador{
         super();
     }
 
-    public Mediocampista(String Nombre, int Edad, String Nacionalidad, String PieHabil, examen1p2_diegovasquez.Equipo Equipo) {
-        super(Nombre, Edad, Nacionalidad, PieHabil, Equipo);
+    public Mediocampista(String Nombre, int Edad, String Nacionalidad, String PieHabil) {
+        super(Nombre, Edad, Nacionalidad, PieHabil);
         Caracteristicas();
     }
     

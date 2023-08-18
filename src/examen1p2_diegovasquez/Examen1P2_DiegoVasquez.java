@@ -5,13 +5,16 @@
 package examen1p2_diegovasquez;
 
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author Diego Vasquez
  */
 public class Examen1P2_DiegoVasquez extends javax.swing.JFrame {
-
+static ArrayList<Jugador> jugadores = new ArrayList();
+   static ArrayList<Equipo> equipos = new ArrayList();
+   static  ArrayList<Estadio> estadios = new ArrayList();
     /**
      * Creates new form Examen1P2_DiegoVasquez
      */
@@ -52,6 +55,9 @@ public class Examen1P2_DiegoVasquez extends javax.swing.JFrame {
         JRB_Delantero = new javax.swing.JRadioButton();
         JP_editarJugador = new javax.swing.JPanel();
         JP_listarJugadores = new javax.swing.JPanel();
+        JL_listar = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        JTA_ListarJugadores = new javax.swing.JTextArea();
         JP_eliminarJugadores = new javax.swing.JPanel();
         EstadiosBackGround = new javax.swing.JPanel();
         JTP_EstadiosCrud = new javax.swing.JTabbedPane();
@@ -239,15 +245,42 @@ public class Examen1P2_DiegoVasquez extends javax.swing.JFrame {
 
         JP_listarJugadores.setBackground(new java.awt.Color(0, 153, 153));
 
+        JL_listar.setBackground(new java.awt.Color(255, 102, 153));
+        JL_listar.setFont(new java.awt.Font("Times New Roman", 1, 48)); // NOI18N
+        JL_listar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        JL_listar.setText("LISTAR");
+        JL_listar.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        JL_listar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        JL_listar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                JL_listarMouseClicked(evt);
+            }
+        });
+
+        JTA_ListarJugadores.setColumns(20);
+        JTA_ListarJugadores.setRows(5);
+        jScrollPane2.setViewportView(JTA_ListarJugadores);
+
         javax.swing.GroupLayout JP_listarJugadoresLayout = new javax.swing.GroupLayout(JP_listarJugadores);
         JP_listarJugadores.setLayout(JP_listarJugadoresLayout);
         JP_listarJugadoresLayout.setHorizontalGroup(
             JP_listarJugadoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 760, Short.MAX_VALUE)
+            .addGroup(JP_listarJugadoresLayout.createSequentialGroup()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 464, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(JL_listar, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(78, Short.MAX_VALUE))
         );
         JP_listarJugadoresLayout.setVerticalGroup(
             JP_listarJugadoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 468, Short.MAX_VALUE)
+            .addGroup(JP_listarJugadoresLayout.createSequentialGroup()
+                .addGap(175, 175, 175)
+                .addComponent(JL_listar, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(183, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JP_listarJugadoresLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane2)
+                .addContainerGap())
         );
 
         JTP_JugadoresCrud.addTab("Listar Jugadores", JP_listarJugadores);
@@ -466,6 +499,32 @@ public class Examen1P2_DiegoVasquez extends javax.swing.JFrame {
         String name = JT_NombreJugador.getText();
         int edad = Integer.parseInt(JT_JugadorEdad.getText());
         String nac = JT_JugadorNac.getText();
+        String pie = "";
+        if(GroupPie.isSelected(JRB_derecha.getModel())){
+            pie = "Derecha";
+        }else if(GroupPie.isSelected(JRB_Izquierda.getModel())){
+            pie = "Izquierda";
+        }
+        if(GroupJugadores.isSelected(JRB_Portero.getModel())){
+            Portero port = new Portero(name, edad, nac, pie);
+            jugadores.add(port);
+            JOptionPane.showMessageDialog(this, "Agregado Exitosamente!");
+        }else if(GroupJugadores.isSelected(JRB_Defensa.getModel())){
+            Defensa def = new Defensa(name, edad, nac, pie);
+            jugadores.add(def);
+            JOptionPane.showMessageDialog(this, "Agregado Exitosamente!");
+        }else if(GroupJugadores.isSelected(JRB_Delantero.getModel())){
+            Delantero del = new Delantero(name, edad, nac, pie);
+            JOptionPane.showMessageDialog(this, "Agregado Exitosamente!");
+        }else if (GroupJugadores.isSelected(JRB_Mediocampista.getModel())){
+            Mediocampista med = new Mediocampista(name, edad, nac, pie);
+            JOptionPane.showMessageDialog(this, "Agregado Exitosamente!");
+        }else{
+            System.out.println("No se pudo agregar porque faltan cosas xd");
+        }
+        JT_JugadorEdad.setText("");
+        JT_JugadorNac.setText("");
+        JT_NombreJugador.setText("");
         
     }//GEN-LAST:event_bt_AgregarJugadorMouseClicked
 
@@ -476,6 +535,17 @@ public class Examen1P2_DiegoVasquez extends javax.swing.JFrame {
     private void JT_JugadorNacActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JT_JugadorNacActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_JT_JugadorNacActionPerformed
+
+    private void JL_listarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JL_listarMouseClicked
+        // TODO add your handling code here:
+        String out = "";
+        for (int i = 0; i < jugadores.size(); i++) {
+            out += "Jugador "+i+"\n"+jugadores.get(i).toString();
+            out += "\n";
+            out += "\n";
+        }
+        JTA_ListarJugadores.setText(out);
+    }//GEN-LAST:event_JL_listarMouseClicked
 
     /**
      * @param args the command line arguments
@@ -511,9 +581,7 @@ public class Examen1P2_DiegoVasquez extends javax.swing.JFrame {
             }
         });
     }
-    ArrayList<Jugador> juagdores = new ArrayList();
-    ArrayList<Equipo> equipos = new ArrayList();
-    ArrayList<Estadio> estadios = new ArrayList();
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel EquiposBackGround;
     private javax.swing.JPanel EstadiosBackGround;
@@ -524,6 +592,7 @@ public class Examen1P2_DiegoVasquez extends javax.swing.JFrame {
     private javax.swing.JLabel JL_NombreJugador1;
     private javax.swing.JLabel JL_Pie;
     private javax.swing.JLabel JL_Title;
+    private javax.swing.JLabel JL_listar;
     private javax.swing.JPanel JP_Simulacion;
     private javax.swing.JPanel JP_crearEquipo;
     private javax.swing.JPanel JP_crearEstadio;
@@ -543,6 +612,7 @@ public class Examen1P2_DiegoVasquez extends javax.swing.JFrame {
     private javax.swing.JRadioButton JRB_Mediocampista;
     private javax.swing.JRadioButton JRB_Portero;
     private javax.swing.JRadioButton JRB_derecha;
+    private javax.swing.JTextArea JTA_ListarJugadores;
     private javax.swing.JTabbedPane JTP_EquiposCrud;
     private javax.swing.JTabbedPane JTP_EstadiosCrud;
     private javax.swing.JTabbedPane JTP_JugadoresCrud;
@@ -553,5 +623,6 @@ public class Examen1P2_DiegoVasquez extends javax.swing.JFrame {
     private javax.swing.JPanel JugadoresBackGround;
     private javax.swing.JLabel bt_AgregarJugador;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane2;
     // End of variables declaration//GEN-END:variables
 }

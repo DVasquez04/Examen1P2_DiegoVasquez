@@ -28,12 +28,12 @@ public abstract class Jugador {
     public Jugador() {
     }
 
-    public Jugador(String Nombre, int Edad, String Nacionalidad, String PieHabil, Equipo Equipo) {
+    public Jugador(String Nombre, int Edad, String Nacionalidad, String PieHabil) {
         this.Nombre = Nombre;
         this.Edad = Edad;
         this.Nacionalidad = Nacionalidad;
         this.PieHabil = PieHabil;
-        this.Equipo = Equipo;
+        
     }
 
     public String getNombre() {
