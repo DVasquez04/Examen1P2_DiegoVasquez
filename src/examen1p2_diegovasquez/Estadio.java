@@ -12,12 +12,12 @@ public class Estadio {
     private String Nombre;
     private String Ciudad;
     private int Capacidad;
-    private Equipo EquipoPerteneciente;
+    private String EquipoPerteneciente;
 
     public Estadio() {
     }
 
-    public Estadio(String Nombre, String Ciudad, int Capacidad, Equipo EquipoPerteneciente) {
+    public Estadio(String Nombre, String Ciudad, int Capacidad, String EquipoPerteneciente) {
         this.Nombre = Nombre;
         this.Ciudad = Ciudad;
         this.Capacidad = Capacidad;
@@ -48,11 +48,11 @@ public class Estadio {
         this.Capacidad = Capacidad;
     }
 
-    public Equipo getEquipoPerteneciente() {
+    public String getEquipoPerteneciente() {
         return EquipoPerteneciente;
     }
 
-    public void setEquipoPerteneciente(Equipo EquipoPerteneciente) {
+    public void setEquipoPerteneciente(String EquipoPerteneciente) {
         this.EquipoPerteneciente = EquipoPerteneciente;
     }
 
