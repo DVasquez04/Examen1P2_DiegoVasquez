@@ -153,6 +153,13 @@ static ArrayList<Jugador> jugadores = new ArrayList();
         JT_PosElimEquipo = new javax.swing.JTextField();
         JL_EliminarEquipo = new javax.swing.JLabel();
         JP_Simulacion = new javax.swing.JPanel();
+        jScrollPane11 = new javax.swing.JScrollPane();
+        JTA_ListarEquipos1 = new javax.swing.JTextArea();
+        JL_ElimPos5 = new javax.swing.JLabel();
+        JT_PosE2 = new javax.swing.JTextField();
+        JL_ElimPos6 = new javax.swing.JLabel();
+        JT_PosE1 = new javax.swing.JTextField();
+        JL_Simular = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -1237,15 +1244,71 @@ static ArrayList<Jugador> jugadores = new ArrayList();
 
         JP_Simulacion.setBackground(new java.awt.Color(0, 255, 204));
 
+        JTA_ListarEquipos1.setColumns(20);
+        JTA_ListarEquipos1.setRows(5);
+        jScrollPane11.setViewportView(JTA_ListarEquipos1);
+
+        JL_ElimPos5.setForeground(new java.awt.Color(0, 0, 0));
+        JL_ElimPos5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        JL_ElimPos5.setText("Ingrese que posicion del Segundo Equipo: ");
+
+        JL_ElimPos6.setForeground(new java.awt.Color(0, 0, 0));
+        JL_ElimPos6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        JL_ElimPos6.setText("Ingrese que posicion del primer Equipo: ");
+
+        JL_Simular.setBackground(new java.awt.Color(255, 51, 51));
+        JL_Simular.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        JL_Simular.setForeground(new java.awt.Color(0, 0, 0));
+        JL_Simular.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        JL_Simular.setText("SIMULAR");
+        JL_Simular.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        JL_Simular.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        JL_Simular.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                JL_SimularMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout JP_SimulacionLayout = new javax.swing.GroupLayout(JP_Simulacion);
         JP_Simulacion.setLayout(JP_SimulacionLayout);
         JP_SimulacionLayout.setHorizontalGroup(
             JP_SimulacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 850, Short.MAX_VALUE)
+            .addGroup(JP_SimulacionLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, 464, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(JP_SimulacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(JP_SimulacionLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(JP_SimulacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(JL_ElimPos5)
+                            .addComponent(JL_ElimPos6))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(JP_SimulacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(JT_PosE1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(JT_PosE2, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(JP_SimulacionLayout.createSequentialGroup()
+                        .addGap(61, 61, 61)
+                        .addComponent(JL_Simular, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(58, Short.MAX_VALUE))
         );
         JP_SimulacionLayout.setVerticalGroup(
             JP_SimulacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 499, Short.MAX_VALUE)
+            .addGroup(JP_SimulacionLayout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(jScrollPane11, javax.swing.GroupLayout.DEFAULT_SIZE, 456, Short.MAX_VALUE)
+                .addGap(26, 26, 26))
+            .addGroup(JP_SimulacionLayout.createSequentialGroup()
+                .addGap(73, 73, 73)
+                .addGroup(JP_SimulacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(JL_ElimPos6, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JT_PosE1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(28, 28, 28)
+                .addGroup(JP_SimulacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(JL_ElimPos5, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JT_PosE2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(60, 60, 60)
+                .addComponent(JL_Simular, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         JT_MainMenu.addTab("Simulacion", JP_Simulacion);
@@ -1545,6 +1608,7 @@ static ArrayList<Jugador> jugadores = new ArrayList();
             out += "\n";
         }
         JTA_ListarEquipos.setText(out);
+        JTA_ListarEquipos1.setText(out);
     }//GEN-LAST:event_JL_listarEquipoMouseClicked
 
     private void JTP_EquiposCrudMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JTP_EquiposCrudMouseClicked
@@ -1590,6 +1654,11 @@ static ArrayList<Jugador> jugadores = new ArrayList();
             JOptionPane.showMessageDialog(this, "Equipo Modificado Exitosamente");
         }
     }//GEN-LAST:event_JL_ModEquipoMouseClicked
+
+    private void JL_SimularMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JL_SimularMouseClicked
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(this, "Hasta aca llegue jeje, gracias por su atencion :3");
+    }//GEN-LAST:event_JL_SimularMouseClicked
 
     /**
      * @param args the command line arguments
@@ -1646,6 +1715,8 @@ static ArrayList<Jugador> jugadores = new ArrayList();
     private javax.swing.JLabel JL_ElimPos2;
     private javax.swing.JLabel JL_ElimPos3;
     private javax.swing.JLabel JL_ElimPos4;
+    private javax.swing.JLabel JL_ElimPos5;
+    private javax.swing.JLabel JL_ElimPos6;
     private javax.swing.JLabel JL_EliminarEquipo;
     private javax.swing.JLabel JL_EliminarEstadio;
     private javax.swing.JLabel JL_EliminarJugador;
@@ -1663,6 +1734,7 @@ static ArrayList<Jugador> jugadores = new ArrayList();
     private javax.swing.JLabel JL_NombreJugador2;
     private javax.swing.JLabel JL_Pie;
     private javax.swing.JLabel JL_Pie1;
+    private javax.swing.JLabel JL_Simular;
     private javax.swing.JLabel JL_Title;
     private javax.swing.JLabel JL_Title1;
     private javax.swing.JLabel JL_Title2;
@@ -1701,6 +1773,7 @@ static ArrayList<Jugador> jugadores = new ArrayList();
     private javax.swing.JTextArea JTA_EliminarEstadios;
     private javax.swing.JTextArea JTA_EliminarJugadores;
     private javax.swing.JTextArea JTA_ListarEquipos;
+    private javax.swing.JTextArea JTA_ListarEquipos1;
     private javax.swing.JTextArea JTA_ListarEstadios;
     private javax.swing.JTextArea JTA_ListarJugadores;
     private javax.swing.JTextArea JTA_Plantilla;
@@ -1726,6 +1799,8 @@ static ArrayList<Jugador> jugadores = new ArrayList();
     private javax.swing.JTextField JT_NombreEstadio1;
     private javax.swing.JTextField JT_NombreJugador;
     private javax.swing.JTextField JT_NombreJugador1;
+    private javax.swing.JTextField JT_PosE1;
+    private javax.swing.JTextField JT_PosE2;
     private javax.swing.JTextField JT_PosElimEquipo;
     private javax.swing.JTextField JT_PosElimEstadio;
     private javax.swing.JTextField JT_PosElimJugador;
@@ -1740,6 +1815,7 @@ static ArrayList<Jugador> jugadores = new ArrayList();
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane10;
+    private javax.swing.JScrollPane jScrollPane11;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
