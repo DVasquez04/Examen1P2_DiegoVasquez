@@ -109,7 +109,7 @@ static ArrayList<Jugador> jugadores = new ArrayList();
         JT_Capacidad1 = new javax.swing.JTextField();
         JL_EquipoEstadio1 = new javax.swing.JLabel();
         JT_EquipoEstadio1 = new javax.swing.JTextField();
-        JL_ModEquipo = new javax.swing.JLabel();
+        JL_ModEstadio = new javax.swing.JLabel();
         JP_listarEstadios = new javax.swing.JPanel();
         jScrollPane5 = new javax.swing.JScrollPane();
         JTA_ListarEstadios = new javax.swing.JTextArea();
@@ -131,9 +131,27 @@ static ArrayList<Jugador> jugadores = new ArrayList();
         JL_Title2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         JTA_Plantilla = new javax.swing.JTextArea();
+        jLabel3 = new javax.swing.JLabel();
         JP_editarEquipo = new javax.swing.JPanel();
+        jScrollPane9 = new javax.swing.JScrollPane();
+        JTA_EditarEquipos = new javax.swing.JTextArea();
+        JL_ElimPos4 = new javax.swing.JLabel();
+        JT_PosModEquipo = new javax.swing.JTextField();
+        JL_ModEquipo = new javax.swing.JLabel();
+        JL_NombreEquipo1 = new javax.swing.JLabel();
+        JT_NombreEquipo1 = new javax.swing.JTextField();
+        JL_CiudadEquipo1 = new javax.swing.JLabel();
+        JT_CiudadEquipo1 = new javax.swing.JTextField();
         JP_listarEquipos = new javax.swing.JPanel();
+        jScrollPane8 = new javax.swing.JScrollPane();
+        JTA_ListarEquipos = new javax.swing.JTextArea();
+        JL_listarEquipo = new javax.swing.JLabel();
         JP_eliminarEquipos = new javax.swing.JPanel();
+        jScrollPane10 = new javax.swing.JScrollPane();
+        JTA_EliminarEquipos = new javax.swing.JTextArea();
+        JL_ElimPos3 = new javax.swing.JLabel();
+        JT_PosElimEquipo = new javax.swing.JTextField();
+        JL_EliminarEquipo = new javax.swing.JLabel();
         JP_Simulacion = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -263,7 +281,7 @@ static ArrayList<Jugador> jugadores = new ArrayList();
                 .addGroup(JP_crearJugadorLayout.createSequentialGroup()
                     .addGap(44, 44, 44)
                     .addComponent(JL_NombreJugador1, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(644, Short.MAX_VALUE)))
+                    .addContainerGap(727, Short.MAX_VALUE)))
         );
         JP_crearJugadorLayout.setVerticalGroup(
             JP_crearJugadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -426,7 +444,7 @@ static ArrayList<Jugador> jugadores = new ArrayList();
                                 .addGap(18, 18, 18)
                                 .addComponent(JRB_Mediocampista1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap(11, Short.MAX_VALUE))
+                .addContainerGap(94, Short.MAX_VALUE))
         );
         JP_editarJugadorLayout.setVerticalGroup(
             JP_editarJugadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -472,6 +490,7 @@ static ArrayList<Jugador> jugadores = new ArrayList();
 
         JL_listar.setBackground(new java.awt.Color(255, 102, 153));
         JL_listar.setFont(new java.awt.Font("Times New Roman", 1, 48)); // NOI18N
+        JL_listar.setForeground(new java.awt.Color(0, 0, 0));
         JL_listar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         JL_listar.setText("LISTAR");
         JL_listar.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -654,7 +673,7 @@ static ArrayList<Jugador> jugadores = new ArrayList();
                         .addComponent(JL_CiudadEstadio, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(JT_CiudadEstadio, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 129, Short.MAX_VALUE)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(25, 25, 25))))
         );
@@ -716,16 +735,16 @@ static ArrayList<Jugador> jugadores = new ArrayList();
         JL_EquipoEstadio1.setForeground(new java.awt.Color(0, 0, 0));
         JL_EquipoEstadio1.setText("Equipo al que pertenece: ");
 
-        JL_ModEquipo.setBackground(new java.awt.Color(204, 51, 255));
-        JL_ModEquipo.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
-        JL_ModEquipo.setForeground(new java.awt.Color(0, 0, 0));
-        JL_ModEquipo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        JL_ModEquipo.setText("MODIFICAR");
-        JL_ModEquipo.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        JL_ModEquipo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        JL_ModEquipo.addMouseListener(new java.awt.event.MouseAdapter() {
+        JL_ModEstadio.setBackground(new java.awt.Color(204, 51, 255));
+        JL_ModEstadio.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        JL_ModEstadio.setForeground(new java.awt.Color(0, 0, 0));
+        JL_ModEstadio.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        JL_ModEstadio.setText("MODIFICAR");
+        JL_ModEstadio.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        JL_ModEstadio.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        JL_ModEstadio.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                JL_ModEquipoMouseClicked(evt);
+                JL_ModEstadioMouseClicked(evt);
             }
         });
 
@@ -763,7 +782,7 @@ static ArrayList<Jugador> jugadores = new ArrayList();
                                 .addComponent(JT_NombreEstadio1, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(JP_editarEstadioLayout.createSequentialGroup()
                         .addGap(26, 26, 26)
-                        .addComponent(JL_ModEquipo, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(JL_ModEstadio, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE))))
         );
         JP_editarEstadioLayout.setVerticalGroup(
             JP_editarEstadioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -790,7 +809,7 @@ static ArrayList<Jugador> jugadores = new ArrayList();
                     .addComponent(JL_EquipoEstadio1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(JT_EquipoEstadio1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(29, 29, 29)
-                .addComponent(JL_ModEquipo, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(JL_ModEstadio, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -804,6 +823,7 @@ static ArrayList<Jugador> jugadores = new ArrayList();
 
         JL_listarEstadios.setBackground(new java.awt.Color(255, 102, 153));
         JL_listarEstadios.setFont(new java.awt.Font("Times New Roman", 1, 48)); // NOI18N
+        JL_listarEstadios.setForeground(new java.awt.Color(0, 0, 0));
         JL_listarEstadios.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         JL_listarEstadios.setText("LISTAR");
         JL_listarEstadios.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -823,7 +843,7 @@ static ArrayList<Jugador> jugadores = new ArrayList();
                 .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 464, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
                 .addComponent(JL_listarEstadios, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(71, Short.MAX_VALUE))
+                .addContainerGap(154, Short.MAX_VALUE))
         );
         JP_listarEstadiosLayout.setVerticalGroup(
             JP_listarEstadiosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -866,7 +886,7 @@ static ArrayList<Jugador> jugadores = new ArrayList();
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JP_eliminarEstadiosLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 464, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 98, Short.MAX_VALUE)
                 .addGroup(JP_eliminarEstadiosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JP_eliminarEstadiosLayout.createSequentialGroup()
                         .addComponent(JL_ElimPos1)
@@ -910,6 +930,12 @@ static ArrayList<Jugador> jugadores = new ArrayList();
 
         EquiposBackGround.setBackground(new java.awt.Color(0, 255, 204));
 
+        JTP_EquiposCrud.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                JTP_EquiposCrudMouseClicked(evt);
+            }
+        });
+
         JP_crearEquipo.setBackground(new java.awt.Color(0, 204, 153));
 
         JL_NombreEquipo.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -942,33 +968,48 @@ static ArrayList<Jugador> jugadores = new ArrayList();
         JTA_Plantilla.setText("Jugadores actuales en equipo: \n");
         jScrollPane1.setViewportView(JTA_Plantilla);
 
+        jLabel3.setBackground(new java.awt.Color(0, 0, 255));
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("Agregar el Equipo");
+        jLabel3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jLabel3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel3MouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout JP_crearEquipoLayout = new javax.swing.GroupLayout(JP_crearEquipo);
         JP_crearEquipo.setLayout(JP_crearEquipoLayout);
         JP_crearEquipoLayout.setHorizontalGroup(
             JP_crearEquipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(JP_crearEquipoLayout.createSequentialGroup()
-                .addGap(256, 256, 256)
-                .addComponent(JL_Title2, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(20, 20, 20)
+                .addGroup(JP_crearEquipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(JP_crearEquipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(JP_crearEquipoLayout.createSequentialGroup()
+                            .addComponent(JL_CiudadEquipo, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(JT_CiudadEquipo, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(JP_crearEquipoLayout.createSequentialGroup()
+                            .addComponent(JL_NombreEquipo, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(JT_NombreEquipo, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(JL_AgregarJugadoresEquipo, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 181, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(67, 67, 67))
             .addGroup(JP_crearEquipoLayout.createSequentialGroup()
                 .addGroup(JP_crearEquipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(JP_crearEquipoLayout.createSequentialGroup()
-                        .addGap(39, 39, 39)
-                        .addComponent(JL_AgregarJugadoresEquipo, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(256, 256, 256)
+                        .addComponent(JL_Title2, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(JP_crearEquipoLayout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addGroup(JP_crearEquipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(JP_crearEquipoLayout.createSequentialGroup()
-                                .addComponent(JL_CiudadEquipo, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(JT_CiudadEquipo, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(JP_crearEquipoLayout.createSequentialGroup()
-                                .addComponent(JL_NombreEquipo, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(JT_NombreEquipo, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 98, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(67, 67, 67))
+                        .addGap(200, 200, 200)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         JP_crearEquipoLayout.setVerticalGroup(
             JP_crearEquipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -985,55 +1026,198 @@ static ArrayList<Jugador> jugadores = new ArrayList();
                         .addGroup(JP_crearEquipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(JT_CiudadEquipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(JL_CiudadEquipo, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(26, 26, 26)
+                        .addGap(29, 29, 29)
                         .addComponent(JL_AgregarJugadoresEquipo, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(213, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(63, 63, 63))
         );
 
         JTP_EquiposCrud.addTab("Crear Equipo", JP_crearEquipo);
 
         JP_editarEquipo.setBackground(new java.awt.Color(0, 204, 153));
 
+        JTA_EditarEquipos.setColumns(20);
+        JTA_EditarEquipos.setRows(5);
+        jScrollPane9.setViewportView(JTA_EditarEquipos);
+
+        JL_ElimPos4.setForeground(new java.awt.Color(0, 0, 0));
+        JL_ElimPos4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        JL_ElimPos4.setText("Ingrese que posicion de Equipo Modificar: ");
+
+        JL_ModEquipo.setBackground(new java.awt.Color(204, 51, 255));
+        JL_ModEquipo.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        JL_ModEquipo.setForeground(new java.awt.Color(0, 0, 0));
+        JL_ModEquipo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        JL_ModEquipo.setText("MODIFICAR");
+        JL_ModEquipo.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        JL_ModEquipo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        JL_ModEquipo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                JL_ModEquipoMouseClicked(evt);
+            }
+        });
+
+        JL_NombreEquipo1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        JL_NombreEquipo1.setForeground(new java.awt.Color(0, 0, 0));
+        JL_NombreEquipo1.setText("Nombre: ");
+
+        JL_CiudadEquipo1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        JL_CiudadEquipo1.setForeground(new java.awt.Color(0, 0, 0));
+        JL_CiudadEquipo1.setText("Ciudad: ");
+
         javax.swing.GroupLayout JP_editarEquipoLayout = new javax.swing.GroupLayout(JP_editarEquipo);
         JP_editarEquipo.setLayout(JP_editarEquipoLayout);
         JP_editarEquipoLayout.setHorizontalGroup(
             JP_editarEquipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 767, Short.MAX_VALUE)
+            .addGroup(JP_editarEquipoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 464, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(JP_editarEquipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(JP_editarEquipoLayout.createSequentialGroup()
+                        .addGap(25, 25, 25)
+                        .addComponent(JL_ElimPos4)
+                        .addGap(29, 29, 29)
+                        .addComponent(JT_PosModEquipo, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JP_editarEquipoLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(JP_editarEquipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JP_editarEquipoLayout.createSequentialGroup()
+                                .addGroup(JP_editarEquipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(JP_editarEquipoLayout.createSequentialGroup()
+                                        .addComponent(JL_CiudadEquipo1, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(JT_CiudadEquipo1, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(JP_editarEquipoLayout.createSequentialGroup()
+                                        .addComponent(JL_NombreEquipo1, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(JT_NombreEquipo1, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addContainerGap())
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JP_editarEquipoLayout.createSequentialGroup()
+                                .addComponent(JL_ModEquipo, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(73, 73, 73))))))
         );
         JP_editarEquipoLayout.setVerticalGroup(
             JP_editarEquipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 468, Short.MAX_VALUE)
+            .addComponent(jScrollPane9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 468, Short.MAX_VALUE)
+            .addGroup(JP_editarEquipoLayout.createSequentialGroup()
+                .addGap(33, 33, 33)
+                .addGroup(JP_editarEquipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(JL_ElimPos4, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JT_PosModEquipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(JP_editarEquipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(JT_NombreEquipo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JL_NombreEquipo1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(JP_editarEquipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(JT_CiudadEquipo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JL_CiudadEquipo1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(54, 54, 54)
+                .addComponent(JL_ModEquipo, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         JTP_EquiposCrud.addTab("Editar Equipo", JP_editarEquipo);
 
         JP_listarEquipos.setBackground(new java.awt.Color(0, 204, 153));
 
+        JTA_ListarEquipos.setColumns(20);
+        JTA_ListarEquipos.setRows(5);
+        jScrollPane8.setViewportView(JTA_ListarEquipos);
+
+        JL_listarEquipo.setBackground(new java.awt.Color(255, 102, 153));
+        JL_listarEquipo.setFont(new java.awt.Font("Times New Roman", 1, 48)); // NOI18N
+        JL_listarEquipo.setForeground(new java.awt.Color(0, 0, 0));
+        JL_listarEquipo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        JL_listarEquipo.setText("LISTAR");
+        JL_listarEquipo.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        JL_listarEquipo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        JL_listarEquipo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                JL_listarEquipoMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout JP_listarEquiposLayout = new javax.swing.GroupLayout(JP_listarEquipos);
         JP_listarEquipos.setLayout(JP_listarEquiposLayout);
         JP_listarEquiposLayout.setHorizontalGroup(
             JP_listarEquiposLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 767, Short.MAX_VALUE)
+            .addGroup(JP_listarEquiposLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 464, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(37, 37, 37)
+                .addComponent(JL_listarEquipo, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(143, Short.MAX_VALUE))
         );
         JP_listarEquiposLayout.setVerticalGroup(
             JP_listarEquiposLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 468, Short.MAX_VALUE)
+            .addGroup(JP_listarEquiposLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane8, javax.swing.GroupLayout.DEFAULT_SIZE, 456, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(JP_listarEquiposLayout.createSequentialGroup()
+                .addGap(170, 170, 170)
+                .addComponent(JL_listarEquipo, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         JTP_EquiposCrud.addTab("Listar Equipos", JP_listarEquipos);
 
         JP_eliminarEquipos.setBackground(new java.awt.Color(0, 204, 153));
 
+        JTA_EliminarEquipos.setColumns(20);
+        JTA_EliminarEquipos.setRows(5);
+        jScrollPane10.setViewportView(JTA_EliminarEquipos);
+
+        JL_ElimPos3.setForeground(new java.awt.Color(0, 0, 0));
+        JL_ElimPos3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        JL_ElimPos3.setText("Ingrese que posicion de Equipo Eliminar: ");
+
+        JL_EliminarEquipo.setBackground(new java.awt.Color(204, 0, 0));
+        JL_EliminarEquipo.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        JL_EliminarEquipo.setForeground(new java.awt.Color(0, 0, 0));
+        JL_EliminarEquipo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        JL_EliminarEquipo.setText("ELIMINAR");
+        JL_EliminarEquipo.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        JL_EliminarEquipo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        JL_EliminarEquipo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                JL_EliminarEquipoMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout JP_eliminarEquiposLayout = new javax.swing.GroupLayout(JP_eliminarEquipos);
         JP_eliminarEquipos.setLayout(JP_eliminarEquiposLayout);
         JP_eliminarEquiposLayout.setHorizontalGroup(
             JP_eliminarEquiposLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 767, Short.MAX_VALUE)
+            .addGroup(JP_eliminarEquiposLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 464, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 100, Short.MAX_VALUE)
+                .addGroup(JP_eliminarEquiposLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JP_eliminarEquiposLayout.createSequentialGroup()
+                        .addComponent(JL_ElimPos3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(JT_PosElimEquipo, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JP_eliminarEquiposLayout.createSequentialGroup()
+                        .addComponent(JL_EliminarEquipo, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(33, 33, 33)))
+                .addContainerGap())
         );
         JP_eliminarEquiposLayout.setVerticalGroup(
             JP_eliminarEquiposLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 468, Short.MAX_VALUE)
+            .addComponent(jScrollPane10, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 468, Short.MAX_VALUE)
+            .addGroup(JP_eliminarEquiposLayout.createSequentialGroup()
+                .addGap(102, 102, 102)
+                .addGroup(JP_eliminarEquiposLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(JL_ElimPos3, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JT_PosElimEquipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(88, 88, 88)
+                .addComponent(JL_EliminarEquipo, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         JTP_EquiposCrud.addTab("Eliminar Equipos", JP_eliminarEquipos);
@@ -1057,7 +1241,7 @@ static ArrayList<Jugador> jugadores = new ArrayList();
         JP_Simulacion.setLayout(JP_SimulacionLayout);
         JP_SimulacionLayout.setHorizontalGroup(
             JP_SimulacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 767, Short.MAX_VALUE)
+            .addGap(0, 850, Short.MAX_VALUE)
         );
         JP_SimulacionLayout.setVerticalGroup(
             JP_SimulacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1286,7 +1470,7 @@ static ArrayList<Jugador> jugadores = new ArrayList();
         JTA_EditarEstadios.setText(out);
     }//GEN-LAST:event_JTP_EstadiosCrudMouseClicked
 
-    private void JL_ModEquipoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JL_ModEquipoMouseClicked
+    private void JL_ModEstadioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JL_ModEstadioMouseClicked
         // TODO add your handling code here:
         int pos = Integer.parseInt(JT_PosElimEstadio.getText());
         if (pos < 0 || pos > estadios.size()-1){
@@ -1308,7 +1492,7 @@ static ArrayList<Jugador> jugadores = new ArrayList();
             JTA_EditarEstadios.setText(out);
             }
         
-    }//GEN-LAST:event_JL_ModEquipoMouseClicked
+    }//GEN-LAST:event_JL_ModEstadioMouseClicked
 
     private void JL_AgregarJugadoresEquipoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JL_AgregarJugadoresEquipoMouseClicked
         // TODO add your handling code here:
@@ -1338,6 +1522,74 @@ static ArrayList<Jugador> jugadores = new ArrayList();
             }
         }
     }//GEN-LAST:event_JL_AgregarJugadoresEquipoMouseClicked
+
+    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
+        // TODO add your handling code here:
+        String nombre = JT_NombreEquipo.getText();
+        String ciud = JT_CiudadEquipo.getText();
+        Equipo e = new Equipo(nombre, ciud, plantilla);
+        equipos.add(e);
+        
+        JOptionPane.showMessageDialog(this, "Equipo creado Exitosamente!");
+        JT_NombreEquipo.setText("");
+        JT_CiudadEquipo.setText("");
+        JTA_Plantilla.setText("Jugadores actuales en equipo:");
+    }//GEN-LAST:event_jLabel3MouseClicked
+
+    private void JL_listarEquipoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JL_listarEquipoMouseClicked
+        // TODO add your handling code here:
+        String out = "";
+        for (int i = 0; i < equipos.size(); i++) {
+            out += "Equipo "+i+"\n"+equipos.get(i).toString();
+            out += "\n";
+            out += "\n";
+        }
+        JTA_ListarEquipos.setText(out);
+    }//GEN-LAST:event_JL_listarEquipoMouseClicked
+
+    private void JTP_EquiposCrudMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JTP_EquiposCrudMouseClicked
+        // TODO add your handling code here:
+        String out = "";
+        for (int i = 0; i < equipos.size(); i++) {
+            out += "Equipo "+i+"\n"+equipos.get(i).toString();
+            out += "\n";
+            out += "\n";
+        }
+        JTA_EditarEquipos.setText(out);
+        JTA_EliminarEquipos.setText(out);
+    }//GEN-LAST:event_JTP_EquiposCrudMouseClicked
+
+    private void JL_EliminarEquipoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JL_EliminarEquipoMouseClicked
+        // TODO add your handling code here:
+        int pos = Integer.parseInt(JT_PosElimEquipo.getText());
+        if (pos < 0 || pos > equipos.size()-1){
+            JOptionPane.showMessageDialog(this, "POSICION INVALIDA DUMMY, intentalo de nuevo");
+        }else{
+            equipos.remove(pos);
+            JOptionPane.showMessageDialog(this, "Equipo eliminado exitosamente");
+            String out = "";
+        for (int i = 0; i < equipos.size(); i++) {
+            out += "Equipo "+i+"\n"+equipos.get(i).toString();
+            out += "\n";
+            out += "\n";
+        }
+        JTA_EliminarEquipos.setText(out);
+        }
+    }//GEN-LAST:event_JL_EliminarEquipoMouseClicked
+
+    private void JL_ModEquipoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JL_ModEquipoMouseClicked
+        // TODO add your handling code here:
+        int pos = Integer.parseInt(JT_PosModEquipo.getText());
+        if (pos < 0 || pos > equipos.size()-1){
+            JOptionPane.showMessageDialog(this, "POSICION INVALIDA DUMMY, intentalo de nuevo");
+        }else{
+            String nombre = JT_NombreEquipo1.getText();
+            String ciud = JT_CiudadEquipo1.getText();
+            Equipo e = new Equipo(nombre, ciud, plantilla);
+            equipos.set(pos, e);
+            JOptionPane.showMessageDialog(this, "Equipo Modificado Exitosamente");
+        }
+    }//GEN-LAST:event_JL_ModEquipoMouseClicked
 
     /**
      * @param args the command line arguments
@@ -1383,6 +1635,7 @@ static ArrayList<Jugador> jugadores = new ArrayList();
     private javax.swing.JLabel JL_Capacidad;
     private javax.swing.JLabel JL_Capacidad1;
     private javax.swing.JLabel JL_CiudadEquipo;
+    private javax.swing.JLabel JL_CiudadEquipo1;
     private javax.swing.JLabel JL_CiudadEstadio;
     private javax.swing.JLabel JL_CiudadEstadio1;
     private javax.swing.JLabel JL_EdadJugador;
@@ -1391,14 +1644,19 @@ static ArrayList<Jugador> jugadores = new ArrayList();
     private javax.swing.JLabel JL_ElimPos;
     private javax.swing.JLabel JL_ElimPos1;
     private javax.swing.JLabel JL_ElimPos2;
+    private javax.swing.JLabel JL_ElimPos3;
+    private javax.swing.JLabel JL_ElimPos4;
+    private javax.swing.JLabel JL_EliminarEquipo;
     private javax.swing.JLabel JL_EliminarEstadio;
     private javax.swing.JLabel JL_EliminarJugador;
     private javax.swing.JLabel JL_EquipoEstadio;
     private javax.swing.JLabel JL_EquipoEstadio1;
     private javax.swing.JLabel JL_ModEquipo;
+    private javax.swing.JLabel JL_ModEstadio;
     private javax.swing.JLabel JL_ModPos;
     private javax.swing.JLabel JL_NacionalidadJ;
     private javax.swing.JLabel JL_NombreEquipo;
+    private javax.swing.JLabel JL_NombreEquipo1;
     private javax.swing.JLabel JL_NombreEstadio;
     private javax.swing.JLabel JL_NombreEstadio1;
     private javax.swing.JLabel JL_NombreJugador1;
@@ -1409,6 +1667,7 @@ static ArrayList<Jugador> jugadores = new ArrayList();
     private javax.swing.JLabel JL_Title1;
     private javax.swing.JLabel JL_Title2;
     private javax.swing.JLabel JL_listar;
+    private javax.swing.JLabel JL_listarEquipo;
     private javax.swing.JLabel JL_listarEstadios;
     private javax.swing.JPanel JP_Simulacion;
     private javax.swing.JPanel JP_crearEquipo;
@@ -1435,10 +1694,13 @@ static ArrayList<Jugador> jugadores = new ArrayList();
     private javax.swing.JRadioButton JRB_Portero1;
     private javax.swing.JRadioButton JRB_derecha;
     private javax.swing.JRadioButton JRB_derecha1;
+    private javax.swing.JTextArea JTA_EditarEquipos;
     private javax.swing.JTextArea JTA_EditarEstadios;
     private javax.swing.JTextArea JTA_EditarJugadores;
+    private javax.swing.JTextArea JTA_EliminarEquipos;
     private javax.swing.JTextArea JTA_EliminarEstadios;
     private javax.swing.JTextArea JTA_EliminarJugadores;
+    private javax.swing.JTextArea JTA_ListarEquipos;
     private javax.swing.JTextArea JTA_ListarEstadios;
     private javax.swing.JTextArea JTA_ListarJugadores;
     private javax.swing.JTextArea JTA_Plantilla;
@@ -1448,6 +1710,7 @@ static ArrayList<Jugador> jugadores = new ArrayList();
     private javax.swing.JTextField JT_Capacidad;
     private javax.swing.JTextField JT_Capacidad1;
     private javax.swing.JTextField JT_CiudadEquipo;
+    private javax.swing.JTextField JT_CiudadEquipo1;
     private javax.swing.JTextField JT_CiudadEstadio;
     private javax.swing.JTextField JT_CiudadEstadio1;
     private javax.swing.JTextField JT_EquipoEstadio;
@@ -1458,25 +1721,32 @@ static ArrayList<Jugador> jugadores = new ArrayList();
     private javax.swing.JTextField JT_JugadorNac1;
     private javax.swing.JTabbedPane JT_MainMenu;
     private javax.swing.JTextField JT_NombreEquipo;
+    private javax.swing.JTextField JT_NombreEquipo1;
     private javax.swing.JTextField JT_NombreEstadio;
     private javax.swing.JTextField JT_NombreEstadio1;
     private javax.swing.JTextField JT_NombreJugador;
     private javax.swing.JTextField JT_NombreJugador1;
+    private javax.swing.JTextField JT_PosElimEquipo;
     private javax.swing.JTextField JT_PosElimEstadio;
     private javax.swing.JTextField JT_PosElimJugador;
     private javax.swing.JTextField JT_PosMod;
+    private javax.swing.JTextField JT_PosModEquipo;
     private javax.swing.JTextField JT_PosModEstadio;
     private javax.swing.JPanel JugadoresBackGround;
     private javax.swing.JLabel bt_AgregarJugador;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane10;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
+    private javax.swing.JScrollPane jScrollPane8;
+    private javax.swing.JScrollPane jScrollPane9;
     // End of variables declaration//GEN-END:variables
 }

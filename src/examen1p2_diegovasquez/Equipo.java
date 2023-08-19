@@ -19,10 +19,10 @@ public class Equipo {
     public Equipo() {
     }
 
-    public Equipo(String Nombre, String Pais) {
+    public Equipo(String Nombre, String Pais, ArrayList<Jugador> Plantilla) {
         this.Nombre = Nombre;
         this.Pais = Pais;
-        
+        this.Plantilla = Plantilla;
     }
 
     public String getNombre() {
@@ -71,6 +71,16 @@ public class Equipo {
     @Override
     public String toString() {
         return "Nombre=" + Nombre + "\nPais=" + Pais + "\nRating=" + Rating + "\nPlantilla=" + Plantilla.toString();
+    }
+    
+    private String listPlantilla(ArrayList<Jugador> plant){
+        String out = "holaaaaaaaaa";
+        for (int i = 0; i < plant.size(); i++) {
+            
+            out+= "Jugador "+i+"\n"+plant.get(i);
+            out += "\n";
+        }
+        return out;
     }
     
 }
