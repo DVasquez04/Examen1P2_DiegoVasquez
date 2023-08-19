@@ -46,7 +46,7 @@ public class Equipo {
         return Rating;
     }
 
-    public void setRating() {
+    private void setRating() {
         int R = 0;
         for (int i = 0; i < Plantilla.size(); i++) {
             R += Plantilla.get(i).getRating();
